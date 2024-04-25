@@ -1,0 +1,33 @@
+extends Node2D
+
+func _ready():
+
+    #nwe一个sprite节点
+    #创建一个节点名字叫spriet
+    var spriet =spriet.new()
+
+
+     #给节点设置图片
+    vat icon = preload("res://icon.png")
+    spriet.set_texture(icon)
+
+
+    #给节点改名
+    spriet.name = "mynode"
+
+
+    #修改坐标
+    spriet.position.tion.x = 200
+    spriet.position.tion.y = 200
+
+
+    #添加到当前场景中
+    add——child（spriet)
+    pass
+
+    #  $+名称 能找到运行中的节点
+    # rotate（） 是每帧旋转 括号内是旋转参数
+func _process(delta)
+    var spriet = $mynode
+    sptiet.rotate(0.1)
+    pass
