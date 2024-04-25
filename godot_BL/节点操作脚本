@@ -21,8 +21,11 @@ func _ready():
     spriet.position.tion.y = 200
 
 
-    #添加到当前场景中
+    #把上面内容添加到当前场景中
+    #Engine.target_fps =   是设置帧数
+    # 4.x 版本帧数设置Engine.target_fps变成 max_fps =
     add——child（spriet)
+    Engine.target_fps = 10
     pass
 
     #  $+名称 能找到运行中的节点
