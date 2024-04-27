@@ -1,0 +1,103 @@
+extends Node
+#继承noed  的类
+#可以使用node 下面的方法
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	#var 是声明 变量
+	
+	#print(name) # 没有赋值 所以是空值 null
+	var name = null  # 空值 null  
+	var name_a = 28  # int  整数
+	var name_b = "一个值"   # str 字符串 
+	var name_c = 0.1  #folat 浮点型
+	var name_d = false # bool  布尔类型  假
+	var name_e = true  #  bool 布尔类型  真 
+	var jineng = str(name_a) + "不是空值" + name_b  # 如果加 null 会报错
+	# 可以相加, 但是数字和字符串相加 需将转换为int整数转换为 str字符串
+	
+	print(name_a)  #赋值 打印 为赋值后的变量 
+	print(name_b) # 打印  变量空值
+	print("name_b") # 打印引号里的内容 而不是赋值变量
+	print(jineng)
+	print('hello word')
+	 # Replace with function body. pass 是空语句 可以删除  方法 没有调用 就用pass
+# 进入该场景会初始化该节点 调用_ready 函数
+
+
+	var vec2 = Vector2.ZERO  #使用浮点数坐标的 2D 向量。
+	# if 和 py 一样
+	# for  变量 in  循环次数
+	
+	var hp = 10
+	var times = 5 # while 循环执行5次
+	while  times >0:   # 执行条件  times大于5  才会执行
+		hp -= 1   #执行方法 
+		print("当前生命值" + str(hp));
+		times -= 1    # 执行次数减少1  如果没有执行结果 就会 无限循环
+# 数组
+
+#func _ready():
+	var worad1 = "短剑"
+	var worad2 = "长剑"
+	var worad3 = "斧头"
+	var worad4 = "长枪"
+	var worad5 = "法杖"
+	var worad6 = "弓弩"
+	# 元素很多 用列表会方便很多
+  # 方括号 创建列表
+	var worads = ["短剑","长剑","斧头","长枪","法杖","弓弩"] 
+	#调用是 从0 开始数的 所以 短剑 对应第0位 长剑对应 第1位
+	#类似 py  列表
+  print（worads[1]）# 打印的是长剑
+
+	worads.pop_back()# 取出最后一个元素
+	worads.pop_front() #取出列表最前面的元素
+	#worads.pop_at()  移除所有元素
+	print(worads[worads.size()-1])# 打印 最后一个元素  无法用 len 
+	
+	print(worads.size())#  py 用print(len(worads)) 读取元素总数量
+	
+	
+	worads.append("音响") # 增加元素
+	
+	
+	for worad in worads: #  
+		print(worad)# 打印所有元素
+
+print(len(worads))#  godot 用print(worads.size()) 读取元素总数量
+
+
+	# 类似 py 字典 创建键值对
+	var hero = {
+		"hp": 20,
+		"mp": 10,
+		"attack":3
+	}
+	
+	for tam in hero:
+		print(tam)# 打印字典的 键
+		print(hero[tam])#打印 字典的值
+
+
+
+#函数
+func _ready():
+	test() # 调用 test（） 函数
+	var tmp = add(1,2) #调用add() 函数 将1,2 赋值给 a，b  在将sum 的返回值赋值给 tmp
+	print(tmp)
+	
+	
+#函数
+#函数后面 有跟执行内容 没有执行内容会报错
+# 可以用pass 表示空
+func test(): # 定义test（） 函数
+	print("test函数")
+	
+	
+func add(a,b):
+	var sum = a + b
+	return sum # 返回sum的值  没有return sum 的话 sum 就是空值 无法调用
+
+
+
