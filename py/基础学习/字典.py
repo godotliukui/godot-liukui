@@ -38,7 +38,11 @@ len(contacts)
 查询键是否存
 "大米" in contacts  #返回bool值 告诉你 是否存在
 
-
+------------------
+字典的三个方法
+zidian.keys（）  #返回所有键
+zidian.values（）  #返回所有值
+zidian.items （）   #返回所有键值对
 
 """
 
