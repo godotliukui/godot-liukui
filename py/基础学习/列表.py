@@ -53,7 +53,7 @@ len（shoping_list）
 列表是 可变的  ： list 。。。
 即 里面的内容是可变的
 
-王列表里面添加元素 列表就会发生变化， 不需要对 shopping_list 重新赋值
+往列表里面添加元素 列表就会发生变化， 不需要对 shopping_list 重新赋值
 shopping_list.append("显示器")  正确添加方法
 shopping_list = shopping_lise.append("显示器“）  是错误的
 ------------------------------
